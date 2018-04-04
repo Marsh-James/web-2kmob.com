@@ -26,7 +26,7 @@ body {
         text-shadow: 2px 2px gray;
 }
 
-.square:hover .square-titles{
+.square:hover .square-titles {
     
     opacity: 0.5;
     transition: opacity .35s ease-in-out;
