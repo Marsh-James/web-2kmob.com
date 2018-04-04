@@ -9,20 +9,43 @@ body {
 .square {
     width: 33.3%;
     padding-bottom: 33.3%;
-    transition: box-shadow 0.17s;
+    
+    -webkit-transition: box-shadow 0.17s ease;
+    -moz-transition: box-shadow 0.17s ease;
+    -o-transition: box-shadow 0.17s ease;
+    transition: box-shadow 0.17s ease;
 }
 
 .square-titles {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vmax;
     color: white;
-    font-size: 2vmax;
-    text-align: center;
+        text-shadow: 2px 2px gray;
+}
+
+.square:hover .square-titles{
+    
+    opacity: 0.5;
+    transition: opacity .35s ease-in-out;
+    -moz-transition: opacity .35s ease-in-out;
+    -webkit-transition: opacity .35s ease-in-out;
+    
+    text-shadow: 2px 2px #ff0000;
+    -webkit-transition: text-shadow 0.35s ease;
+    -moz-transition: text-shadow 0.35s ease;
+    -o-transition: text-shadow 0.35s ease;
+    transition: text-shadow 0.35s ease;
 }
 
 .square:hover {
     cursor: pointer;
+    
+    box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
     -webkit-box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
     -moz-box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
-    box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
 }
 
 /* NAVBAR */
