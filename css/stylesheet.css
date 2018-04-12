@@ -6,9 +6,42 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-entersite {
+    background-color: transparent;
+    border-right: 0.15vmax solid #ff3333;
+    border-left: 0.5vmax solid #ff3333;
+    border-top: 0.15vmax solid #ff3333;
+    border-bottom: 0.15vmax solid #ff3333;
+    
+    -webkit-transition: box-shadow 0.10s ease;
+    -moz-transition: box-shadow 0.10s ease;
+    -o-transition: box-shadow 0.10s ease;
+    transition: box-shadow 0.10s ease;
+    
+    
+    opacity: 0.9;
+}
+
+.btn-entersite:hover {
+    cursor: pointer;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.24), 0 6px 5px 0 rgba(0,0,0,0.19);
+    opacity 0.8;
+
+}
+
 .square {
-    width: 33.3%;
-    padding-bottom: 33.3%;
+    width: 100%;
+    padding-bottom: 25%;
     
     -webkit-transition: box-shadow 0.17s ease;
     -moz-transition: box-shadow 0.17s ease;
@@ -17,27 +50,49 @@ body {
 }
 
 .square-titles {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 4vmax;
     color: white;
-        text-shadow: 2px 2px gray;
+    text-shadow: 2px 2px gray;
 }
+
+.square-landing {
+    width: 15%;
+    padding-bottom: 15%;
+    padding-top: 25%;
+    
+    -webkit-transition: box-shadow 0.17s ease;
+    -moz-transition: box-shadow 0.17s ease;
+    -o-transition: box-shadow 0.17s ease;
+    transition: box-shadow 0.17s ease;
+}
+
+.square-titles-landing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vmax;
+    color: white;
+    text-shadow: 2px 2px gray;
+}
+
 
 .square:hover .square-titles {
     
-    opacity: 0.5;
+    opacity: 0.9;
     transition: opacity .35s ease-in-out;
     -moz-transition: opacity .35s ease-in-out;
     -webkit-transition: opacity .35s ease-in-out;
     
-    text-shadow: 2px 2px #ff0000;
-    -webkit-transition: text-shadow 0.35s ease;
-    -moz-transition: text-shadow 0.35s ease;
-    -o-transition: text-shadow 0.35s ease;
-    transition: text-shadow 0.35s ease;
+    text-shadow: 2px 2px #ff3333;
+    -webkit-transition: text-shadow 0.17s ease;
+    -moz-transition: text-shadow 0.17s ease;
+    -o-transition: text-shadow 0.17s ease;
+    transition: text-shadow 0.17s ease;
 }
 
 .square:hover {
@@ -46,6 +101,12 @@ body {
     box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
     -webkit-box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
     -moz-box-shadow: inset 0px 2px 15px 1px rgba(50, 50, 50, 0.55);
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+    text-align: center; 
 }
 
 /* NAVBAR */
@@ -77,15 +138,81 @@ body {
     text-align: right;
 }
 
-/* SWIPER CUSTOM CSS */
+
+
+
+
+/* SWIPER CUSTOM CSS SMALL */
+.swiper-container-small {
+    width: 100%;
+    height: 50%;
+
+}
+
+.swiper-slide-small {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+
+.swiper-frame-small {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SWIPER CUSTOM CSS MAIN */
 .swiper-logo {
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
     height: 50%;
     width: auto;
     z-index: 2;
+}
+
+.swiper-button {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    position: absolute;
+    height: 5%;
+    width: 10%;
+    z-index: 2;
+    font-size: 1vmax;
+    
+    color: white;
 }
 
 .swiper-container {
