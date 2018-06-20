@@ -3,8 +3,21 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 
 html, body {
-    overflow-x: hidden;
     max-width: 100%;
+}
+
+.parallax_slide_1 { 
+    /* Full height */
+    height: 100%; 
+    position: fixed;
+    
+    /* Create the parallax scrolling effect */
+    background-size: cover;
+    cursor: pointer;
+    width: 100%;
+    height: auto
+    object-fit: cover;
+	background-position: center;
 }
 
 a {

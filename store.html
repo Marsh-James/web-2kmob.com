@@ -21,6 +21,9 @@
         <!--BOOSTRAP CSS CDN-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css?v=2.6.0">
+        
+        <!--JQUERY CSS CDN--->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       
     </head>
     
@@ -46,24 +49,11 @@
           </div>
         </nav>
 
-        <section>
-            <div class="swiper-container-small">
-
-                <div class="swiper-wrapper">	
-                
-                    <div class="swiper-slide"><img class="swiper-frame" src="resources/images/P1000376.JPG" style="background-color: darkgray"></div>
-                    <div class="swiper-slide"><img class="swiper-frame" src="resources/images/P1000384.JPG" style="background-color: dimgray"></div>
-                    <div class="swiper-slide"><img class="swiper-frame" src="resources/images/P1000413.JPG" style="background-color: slategray"></div>
-                
-                </div> 
-                
-                <!--<div class="section-title">STORE</div>-->
-            </div>        
+        <img class="parallax_slide_1" src="/resources/images/P1000376.JPG" style="background-color: darkgray">
             
-        </section>
         <div id="generic_price_table">   
         <section>
-                <div class="container-fluid" style="position: absolute; top: 10%; z-index: 1">
+                <div class="container-fluid" style="position: absolute; z-index: 1">
 
                     <!--BLOCK ROW START-->
                     <div class="row">
@@ -335,7 +325,7 @@
                 </div>
             </section>             
         </div>    
-            
+        
         <!--EXTERNAL LIBS-->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="js/swiper_small/swiper.min.js"></script>
@@ -343,4 +333,11 @@
 
     </body>
 
+    <script>
+        $(window).on('scroll', function () {
+            var pixs = $(document).scrollTop()
+            pixs = pixs / 100;
+            $(".parallax_slide_1").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" })     
+        });
+    </script>
 </html>
