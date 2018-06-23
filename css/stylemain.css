@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+
+body, html {
+  height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#introVideo {
+    height: 100%;
+    width: auto;
+    min-width: 100%; 
+    max-height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.container {
+    position: fixed;
+    width: auto;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn {
+    position: relative;
+    letter-spacing: 0.25em;
+    margin: 0 auto;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 28px;
+    color: #e8e8e8;
+    font-weight: 600;
+}
+
+.btn:hover {
+    color: #e8e8e8;
+}
+.btn::after, .btn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -2;
+}
+.btn::before {
+    opacity: 0.8;
+    background-color: #ff3e1a;
+    top: -1rem;
+    left: 0rem;
+}
+.btn::after {
+    opacity: 0.8;
+    background-color: #8a2be2;
+    top: 1rem;
+    left: 8rem;
+}
+.btn:hover::before, .btn:hover::after {
+    top: 0;
+    -webkit-transform: skewx(0deg);
+            transform: skewx(0deg);
+}
+.btn:hover::after {
+    left: 0rem;
+}
+.btn:hover::before {
+    left: 8.75rem;
+}
+

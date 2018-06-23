@@ -20,26 +20,21 @@
         
         <!--BOOSTRAP CSS CDN-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css?v=2.6.0">
-      
-        <!--JQUERY CSS CDN--->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="css/stylemain.css?v=2.6.0">
+              
     </head>
     
-    <body onload="loaderFunc()" style="background-color: #e8e8e8">
+    <body style="background-color: #000">   
+
+        <video id="introVideo" muted autoplay loop>
+            <source src="resources/intro.mp4" type="video/mp4">
+        </video>
+        <div class="container"><a class="btn" href="/store.html">Enter site</a></div>
+        <!--
         
-        <div class="now playing" id="music" style="z-index: 2">
-            <span class="bar n1"></span>
-            <span class="bar n2"></span>
-            <span class="bar n3"></span>
-            <span class="bar n4"></span>
-            <div id="page-loader"></div>
-        </div>
-           
         <section>
-            <img class="swiper-logo" src="resources/2kmob.png" />
-            <div class="btn swiper-button" href="/store.html"><span><a href=/store.html>ENTER SITE</a></span></div>
+
+
             <div class="swiper-container">
                 <div class="swiper-wrapper">	
                 
@@ -51,7 +46,9 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-                
+        
+        -->
+    
         <!--EXTERNAL LIBS-->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="js/swiper/swiper.min.js"></script>
@@ -60,7 +57,10 @@
     </body>
 
     <script>
-
+        $('introVideo').on('ended', function () {
+          this.load();
+          this.play();
+        });
     </script>
     
 </html>
