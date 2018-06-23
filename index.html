@@ -26,41 +26,14 @@
     
     <body style="background-color: #000">   
 
-        <video id="introVideo" muted autoplay loop>
+        <video poster="/resources/images/P1000376.JPG" id="introVideo" muted autoplay loop>
             <source src="resources/intro.mp4" type="video/mp4">
         </video>
         <div class="container"><a class="btn" href="/store.html">Enter site</a></div>
-        <!--
-        
-        <section>
-
-
-            <div class="swiper-container">
-                <div class="swiper-wrapper">	
-                
-                    <div class="swiper-slide"><img class="swiper-frame" src="resources/images/P1000371.JPG" style="background-color: dimgray"></div>
-                    <div class="swiper-slide"><img class="swiper-frame" src="resources/images/P1000473.JPG" style="background-color: slategray"></div>
-                
-                </div> 
-                
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        
-        -->
     
         <!--EXTERNAL LIBS-->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="js/swiper/swiper.min.js"></script>
         <script src="js/swiper/swiper_settings.js"></script>
 
     </body>
-
-    <script>
-        $('introVideo').on('ended', function () {
-          this.load();
-          this.play();
-        });
-    </script>
-    
 </html>

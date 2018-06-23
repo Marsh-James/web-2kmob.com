@@ -22,10 +22,11 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css?v=2.6.0">
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       
     </head>
     
-    <body style="background: linear-gradient(#1e1e1e ,#202828)">
+    <body class="blur">
 
         <nav class="navbar navbar-expand-md navbar-dark sticky-top">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +48,7 @@
           </div>
         </nav>
 
-        <img class="parallax_slide_1" src="/resources/images/P1000376.JPG" style="background-color: darkgray">
+        <!--<img class="parallax_slide_1" src="/resources/images/P1000376.JPG" style="background-color: darkgray">-->
 
         
         <div id="generic_price_table">   
@@ -328,7 +329,6 @@
         </div>    
         
         <!--EXTERNAL LIBS-->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="js/swiper_small/swiper.min.js"></script>
         <script src="js/swiper_small/swiper_settings.js"></script>
 
@@ -338,7 +338,7 @@
         $(window).on('scroll', function () {
             var pixs = $(document).scrollTop()
             pixs = pixs / 100;
-            $(".parallax_slide_1").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" })     
+            $(".blur").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" })     
         });
     </script>
 </html>
